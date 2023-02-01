@@ -1,0 +1,26 @@
+
+<%-include("header")-%>           <!-- Added header template -->
+
+<div class="box" id="heading">
+      <h1 style="color: black;"><%=DayName%></h1>
+    </div>
+    <div class="box" id="heading">
+      <h1><%=place%></h1>
+</div>
+
+<div class="box">
+      <ul>
+        <%for(var i=0;i<nwItm.length;i++){%>
+          <div class="item">
+            <input type="checkbox">
+            <p><%=nwItm[i]%></p>
+          </div>
+        <%}%>
+      </ul>
+      <form action="/" method="post">
+        <input  type="text" name="item" placeholder="New Task" autocomplete="off"/>
+        <button  type="submit" name="button" value="<%=place%>">+</button>
+      </form>
+</div>
+    
+<%-include("footer")-%>           <!-- Added footer template -->
